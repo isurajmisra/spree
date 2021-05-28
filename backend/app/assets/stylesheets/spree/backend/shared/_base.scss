@@ -1,0 +1,41 @@
+.row {
+  padding: 0 0 15px 0;
+}
+
+.card {
+  overflow: hidden;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.tooltip{
+  pointer-events: none;
+  z-index: $zindex-dropdown;
+}
+
+// No-margin and no-padding helper classes
+@each $side in top bottom left right {
+  .no-margin-#{$side}  { margin-#{side}: 0; }
+  .no-padding-#{$side} { padding-#{side}: 0; }
+}
+
+.js-remove-promo-rule-option-value {
+  color: $primary !important;
+  &:hover {
+    color: darken($primary, 10) !important;
+  }
+}
+
+.button_to {
+  display: inline-block;
+}
+
+.move-handle {
+  cursor: grab;
+}
+
+.badge-light-muted-text {
+  color: rgba(0, 0, 0, 0.50);
+}

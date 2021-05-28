@@ -1,98 +1,90 @@
-# Spree Starter (formerly Spark Starter Kit)
+<a href="https://spreecommerce.org">
+   <img src="https://raw.githubusercontent.com/spree/spree/master/guides/src/images/features/spree_header%402x.png" alt="Spree Commerce - complete open source e-commerce solution built with Ruby on Rails. PWA, Global Commerce, Headless Commerce" />
+</a>
 
-[![Circle CI](https://circleci.com/gh/spree/spree_starter.svg?style=svg)](https://circleci.com/gh/spree/spree_starter) [![Maintainability](https://api.codeclimate.com/v1/badges/d240686c99b3d35eb61b/maintainability)](https://codeclimate.com/github/spree/spree_starter/maintainability)
+# Spree Commerce
 
-This is a Ruby on Rails application minimal template with [Spree Commerce](https://spreecommerce.org) pre-installed, fully dockerized and ready to be deployed to Heroku.
+* [Success Stories](https://spreecommerce.org/stories/)
+* [Documentation](http://guides.spreecommerce.org)
+* [Integrations](https://spreecommerce.org/integrations/)
 
-## Launch on Heroku
+[![Gem Version](https://badge.fury.io/rb/spree.svg)](https://badge.fury.io/rb/spree) [![Circle CI](https://circleci.com/gh/spree/spree.svg?style=shield)](https://circleci.com/gh/spree/spree/tree/master) [![Test Coverage](https://api.codeclimate.com/v1/badges/8277fc2bb0b1f777084f/test_coverage)](https://codeclimate.com/github/spree/spree/test_coverage) [![Slack Status](http://slack.spreecommerce.org/badge.svg)](http://slack.spreecommerce.org)
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+**Spree** is a complete open source e-commerce solution built with Ruby on Rails. It was started by Sean Schofield and is now developed by [Spark Solutions][spark]. We're open to [contributions](https://guides.spreecommerce.org/developer/contributing/).
 
-## Local Installation
+## Key Features
 
-### Install required tools and dependencies:
+![admin panel](guides/src/images/features/admin_panel_978@2x.jpg)
 
-  * [Docker](https://www.docker.com/community-edition#/download) with docker-compose
+* **[Headless Commerce](https://spreecommerce.org/use-cases/headless-ecommerce-api/)** - build mobile apps or custom storefronts in any technology
+* **[PWA](https://spreecommerce.org/use-cases/spree-pwa-progressive-web-application/)** - offline shopping experiences like native mobile apps
+* **[Mobile-first Storefront](https://spreecommerce.org/spree-commerce-demo-explainer/)** - modern, ultra fast and responsive storefront designed for great UX as well as SEO
+* **Global Commerce** - multi currency and multi language support out of the box, different shipping methods / costs for different regions, advanced tax calculation
+* **Multi-Store** - host multiple brands / stores on one Spree instance with different branding, configuration, payment methods, shipping options, product catalogs etc
+* **Responsive Admin Panel** - manage and curate products, users, orders, returns, shipments & more
+* **Orders** - robust system for orders, shipments, returns and refunds
+* **Carts** -  comprehensive and advanced discounts system
+* **Payments** - over 30 payment provider integration out of the box plus API to integrate any other gateway
+* **Run everywhere** - cloud, VPS, Docker, Kubernetes
+* **Battle Tested** - used by thousands of merchants around the globe in all categories since 2007!
+* **Fully customizable** - pick and choose parts you want to use and customize everything else (storefront, order processing, API, etc) to create unique solutions that your business requires
+* **More features available via extensions** - dozens of extensions built by community, ready for use for free!
 
-### Run setup script
+![multi store](guides/src/images/features/international_978@2x.png)
 
-```bash
-bin/setup
-```
+## Demo
 
-### Import sample data such as products, categories, etc (optionally)
+See Spree in action: [demo.spreecommerce.org](https://demo.spreecommerce.org/)
 
-```bash
-docker-compose run web rake spree_sample:load
-```
+Or fire up your own demo on Heroku:
 
-## Running the project
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/spree/spree_starter)
 
-```bash
-docker-compose up
-```
+Admin panel credentials for your own Heroku demo:
 
-## Development
+* login: `spree@example.com`
+* password: `spree123`
 
-### Running rails console
+## Installation
 
-```bash
-docker-compose run web rails c
-```
+### Option A - use Spree Starter with Docker
 
-### Running tests
+1. [Install Docker](https://docs.docker.com/get-docker/)
+2. Download [Spree Starter](https://github.com/spree/spree_starter/archive/main.zip)
+3. Unzip it
+4. Run `bin/setup` in `spree_starter-main` directory
 
-```bash
-docker-compose run web bash
-bundle exec rspec
-```
+### Option B - add Spree to an existing Ruby on Rails application
 
-### Adding new gems
+1. [Please follow Add Spree to an existing Ruby on Rails application tutorial](https://guides.spreecommerce.org/developer/advanced/existing_app_tutorial.html)
 
-Update `Gemfile` and run
+## Documentation
 
-```bash
-bundle install
-docker-compose build
-```
+[Go to Spree Guides](https://guides.spreecommerce.org/)
 
-You will need to restart the server if running:
+## Extensions
 
-```bash
-docker-compose restart
-```
+Extensions provide additional features and integrations for your Spree store
 
-### Updating gems
+[Go to Extensions Directory](https://guides.spreecommerce.org/extensions/)
 
-```bash
-bundle update spree
-docker-compose build
-```
+## Contributing
 
-## Environment variables
+Spree is an open source project and we love contributions in any form - pull requests, issues, feature ideas!
 
-| variable | description | default value |
-|---|---|---|
-| DEBUG_ASSETS | Enables/disables [asset debugging in development](https://guides.rubyonrails.org/asset_pipeline.html#turning-debugging-off) | false |
-| DB_POOL | database connection pool | 5 |
-| MEMCACHED_POOL_SIZE | memcache connection pool | 5 |
-| SENDGRID_API_KEY | API key to interface Sendgrid API | |
+Please review the [Contributing Guide](https://guides.spreecommerce.org/developer/contributing/)
 
 ## License
 
-Spree Starter (formerly Spark Starter Kit) is copyright © 2015-2021
-[Spark Solutions Sp. z o.o.][spark]. It is free software,
-and may be redistributed under the terms specified in the
-[LICENSE](LICENSE.md) file.
+Spree is released under the [New BSD License](https://github.com/spree/spree/blob/master/license.md).
 
 ## About Spark Solutions
 
 [![Spark Solutions](http://sparksolutions.co/wp-content/uploads/2015/01/logo-ss-tr-221x100.png)][spark]
 
-Spree Starter is maintained and funded by [Spark Solutions Sp. z o.o.](http://sparksolutions.co?utm_source=github)
-The names and logos are trademarks of Spark Solutions Sp. z o.o.
+[Spark Solutions][spark] is a software development agency specialized in Ruby on Rails, Spree Commerce and Javascript development. We’ve been leading Spree open-source efforts since 2016 as its core team. We also do client work. Our project teams consist of UX and UI designers, Software Engineers, Testers and Project Managers practicing agile project delivery. We’ll integrate our team with yours to jointly architect, deliver, maintain and scale the software products you need. You drive the project with requirements and acceptance testing and we help you deliver faster using industry-standard project management and comms best practices.
 
 We are passionate about open source software.
 We are [available for hire][spark].
 
-[spark]:http://sparksolutions.co?utm_source=github
+[spark]:https://sparksolutions.co?utm_source=github
